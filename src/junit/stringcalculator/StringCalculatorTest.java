@@ -29,6 +29,7 @@ public class StringCalculatorTest {
         assertThat(StringCalculator.add("//$\n1$2$3"), is(6));
         assertThat(StringCalculator.add("//@\n2@3@8"), is(13));
         assertThat(StringCalculator.add("//@\n"), is(0));
+
     }
 
     @Test(expected = IllegalArgumentException.class)
