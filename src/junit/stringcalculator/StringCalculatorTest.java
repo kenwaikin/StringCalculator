@@ -29,7 +29,6 @@ public class StringCalculatorTest {
         assertThat(StringCalculator.add("//$\n1$2$3"), is(6));
         assertThat(StringCalculator.add("//@\n2@3@8"), is(13));
         assertThat(StringCalculator.add("//@\n"), is(0));
-
     }
 
     @Test(expected = IllegalArgumentException.class)
@@ -64,6 +63,6 @@ public class StringCalculatorTest {
     public void test_add_with_multiple_delimiter() {
         assertThat(StringCalculator.add("//$,@\n1$2@3"), is(6));
         assertThat(StringCalculator.add("//$,@@@\n1$2@@@3"), is(6));
-        assertThat(StringCalculator.add("//$,@@@\n1$2@@@3"), is(6));
+        assertThat(StringCalculator.add("//$$$,@@\n1$$$7@@9"), is(17));
     }
 }
